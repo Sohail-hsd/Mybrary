@@ -9,12 +9,9 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1>Before</h1>
-    <br>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/errorMessage')  %> 
     <!--  This will include every single pages in this body tag -->
     <%- body  %>
-
-    <br>
-    <h1>After</h1>
 </body>
 </html>

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 
-const mongoURI = `${process.env.DATABASE_URI}`
-
+const mongoURI = process.env.DATABASE_URI
+const mongoAtlus = `${process.env.MONGO_ATLUS}`
+const uri = 'mongodb://localhost:27017/mybrary'
 const connectToMongo = () => {
-    mongoose.connect(mongoURI, () => {
-        console.log('Connected to mongo Successfully...!')
+    mongoose.connect(uri, () => {
+        console.log('Connected to mongo Successfully...! (db)')
     })
 }
 
